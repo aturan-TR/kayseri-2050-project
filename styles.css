@@ -1,0 +1,494 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #a5a5a5;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #9e0202b2;
+  color: white;
+}
+
+nav .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+  color: #860000;
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #b6b6b6;
+}
+
+.hero-text button {
+  background-color: #a50000;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+  background-color: #8a0000;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .hero-image {
+    margin-top: 30px;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Burada yuvarlak kenar */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.features {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #9b0000;
+}
+
+.features p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #a1a1a1;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Fareyi üzerine getirince el işareti */
+}
+
+.grid-container img:hover {
+  transform: scale(1.05); /* %5 büyütme */
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+.content-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+
+  /* opacity ve transform kaldırıldı */
+}
+
+.content-block.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Resim ve metin stilleri */
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.text-container {
+  max-width: 600px;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ad0000;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #969696;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-block,
+  .content-block.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 100%;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+}
+.content-block {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  align-items: center;
+}
+
+.content-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-container img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.text-container {
+  max-width: 500px;
+}
+/* Genel stil ayarları */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #880000;
+}
+
+/* Takım bölümü */
+.team-section {
+  padding: 50px 20px;
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile {
+  text-align: center;
+  width: 150px;
+}
+
+.profile img {
+  width: 100%;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d3d3d3;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .profile {
+    width: 120px;
+  }
+
+  .profile img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    width: 100px;
+  }
+
+  .profile img {
+    height: 100px;
+  }
+}
+.pricing-section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2.5rem;
+  color: #b58900; /* koyu sarı */
+  margin-bottom: 10px;
+}
+
+.pricing-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #7c6f00;
+}
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* küçük ekranlarda alta sarması için */
+}
+
+.card {
+  background-color: #fffb1e; /* parlak sarı */
+  color: #333;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(173, 171, 0, 0.4);
+  width: 300px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #6b5200;
+}
+
+.card ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.card ul li {
+  margin-bottom: 12px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.card ul li::before {
+  content: "✔";
+  color: #6b5200;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.faq-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background-color: #013220; /* Metalik koyu yeşil arka plan */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(1, 50, 32, 0.7);
+}
+
+.faq-section h2,
+.faq-section h3 {
+  text-align: center;
+  color: #ffffff; /* Başlık ve alt başlık beyaz */
+  margin-bottom: 10px;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.faq-section h3 {
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.faq-item {
+  background-color: #014d34; /* Koyu yeşil ton, biraz açık arka plan */
+  padding: 20px 25px;
+  border-radius: 10px;
+  border: 1px solid #0b3d0b;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.faq-item .question {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffffff; /* Beyaz soru yazısı */
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-item .answer {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ffffff; /* Beyaz cevap yazısı */
+}
+html {
+  scroll-behavior: smooth;
+}
+nav .nav-links li a {
+  position: relative; /* Alt çizgi için gerekli */
+  color: white;       /* Metin rengi */
+  text-decoration: none; /* Varsayılan alt çizgiyi kaldır */
+  padding-bottom: 4px;  /* Alt çizgi için biraz boşluk */
+}
+
+/* Alt çizgi görünümü için pseudo element */
+nav .nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;           /* Alt çizgi kalınlığı */
+  background-color: white; /* Alt çizgi rengi */
+  transform: scaleX(0);   /* Başlangıçta görünmez */
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+/* Hover ve aktif linklerde alt çizgiyi göster */
+/* Sadece hover’da alt çizgiyi göster */
+nav .nav-links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  background-color: #1a1a1a;
+  color: white;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
